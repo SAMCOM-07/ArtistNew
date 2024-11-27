@@ -392,7 +392,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 20em;
+  min-width: 15em;
   position: fixed;
   top: 0;
   right: 0;
