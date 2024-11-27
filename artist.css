@@ -401,7 +401,7 @@ body{
   -webkit-backdrop-filter: blur(10px);
   height: 100%;
   border-radius: 0px 0px 0px 150px;
-  text-align: right;
+  text-align: center;
   line-height: 50px;
   animation: slide-in 0.7s;
 }
