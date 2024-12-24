@@ -410,6 +410,7 @@ body{
 .close_icon{
   position: absolute;
   top: 0;
+  margin-top: 20px;
 }
 
 .ham_links{
