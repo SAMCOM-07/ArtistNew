@@ -6,6 +6,10 @@ const hamMenu = document.getElementById("hamburger_menu");
 //   hamMenu.style.display = "flex";
 // })
 
+// hamClose.addEventListener("click", event => {
+//   hamMenu.style.display = "none";
+// })
+
 function openHam () {
   hamMenu.style.display = "flex";
 }
@@ -13,3 +17,10 @@ function openHam () {
 function closeHam() {
   hamMenu.style.display = "none";
 }
+
+
+document.addEventListener("click", event => {
+  if (!hamMenu.contains(event.target) && event.target !== hamOpen) {
+    hamMenu.style.display = "none";
+  }
+})
