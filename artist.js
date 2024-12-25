@@ -69,11 +69,17 @@ formSignup.onclick = function () {
     loginBody.style.display = 'none';
     signupBody.style.display = 'flex';
   }
+  else{
+    loginBody.style.display = 'none';
+  }
 }
 
 formLogin.onclick = function () {
   if(loginPage.style.display = 'flex'){
     loginBody.style.display = 'flex';
+    signupBody.style.display = 'none';
+  }
+  else{
     signupBody.style.display = 'none';
   }
 }
