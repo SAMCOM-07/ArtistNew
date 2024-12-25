@@ -6,13 +6,12 @@
   <title>Artist</title>
   <link rel="icon" href="../Website/images/log.png">
   <link rel="stylesheet" href="./artist.css">
-
   
 </head>
 <body>
                   <!--BACKGROUND IMAGE-->
 
-  <a href="./index.html"><img class="bg" src="./images/bg (1).png" alt="background"></a>
+  <img class="bg" src="./images/bg (1).png" alt="background">
 
                         <!--HEADER-->
 <nav class="nav">
@@ -21,17 +20,17 @@
     
       <ul class="links">
         <li class="link_item">
-          <a href="@" class="link login">Login</a>
+          <button class="link login"><span class="real-login">Login</span></button>
         </li>
         <li class="link_item">
-          <button class="link_btn"> <a href="@" class="link link_btn">Join as artist</a></button>
+          <button class="link link_btn"><span class="real-signup">Join as artist</span></button>
         </li>
       </ul>    
     </nav>
   </header>
 
   <section class="ham">
-    <img width="40px" class="ham_logo" src="./images/logo2.png" alt="">
+    <a href="./artist.html"><img width="40px" class="ham_logo" src="./images/logo2.png" alt="Logo"></a>
 
     <button onclick="openHam()" style="border: none; background: transparent;"><svg fill = "lightgrey" id="hamburger_open" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="50" viewBox="0 0 30 30">
         <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
@@ -102,6 +101,7 @@
     </section>
   </main>
 
+<!-- hamburger menu -->
 
   <section id="hamburger_menu">
     <button style="border: none; background: transparent;" onclick="closeHam()" class="close_icon"><svg id="hamburger_close" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="50" viewBox="0 0 32 32">
@@ -110,7 +110,9 @@
 
 
     <div class="ham_cover">
-          <a class="ham_links" href="@">Login <br><span class="ham_links">Join as Artist</span></a>
+          <a class="ham-login">Login</a>
+          <br>
+          <a class="ham-signup">Join as artist</a>
         </div>
   </section>
 
@@ -129,7 +131,57 @@
   </footer>
 
 
-  <script src="./artist.js"></script>
+  <!-- login-page -->
+<section class="log">
+  <div class="login_page">
+
+    <button style="border: none;" onclick="closeLog()" class="login_close_icon"><svg fill="white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="50" viewBox="0 0 32 32">
+      <path d="M 7.21875 5.78125 L 5.78125 7.21875 L 14.5625 16 L 5.78125 24.78125 L 7.21875 26.21875 L 16 17.4375 L 24.78125 26.21875 L 26.21875 24.78125 L 17.4375 16 L 26.21875 7.21875 L 24.78125 5.78125 L 16 14.5625 Z"></path>
+      </svg></button>
+    
+    <!-- login-img -->
+     <div class="log-img"><img src="/Artist/images/singer.png" alt=""></div>
+     <!-- main body -->
+      <form action="">
+        <div class="login_main">
+          <h1 id="login_head">Login</h1>
+            <div class="login_forms">
+              <input type="text" placeholder="Email / Username">
+              <input type="password" placeholder="Password">
+            </div>
+<!-- REMEMBER ME AND SIGN UP -->
+          <div class="rem_sign">
+            <div class="remember">
+              <input id="check1" type="checkbox">
+              <label for="check1">Remember me</label>
+            </div>
+            <h5><a  href="@">Forgot Password?</a></h5>
+          </div>
+          <button class="submit-btn">Submit</button>
+          <h4>Don't have an account? <a class="login-signup">Sign Up</a></h4>
+        </div>
+      </form>
+
+      <!-- SIGN UP -->
+      
+      <form action="">
+        <div class="signup_main">
+          <h1 id="login_head">Sign Up</h1>
+            <div class="login_forms">
+              <input type="text" placeholder="Enter Email">
+              <input type="password" placeholder="Password">
+              <input type="password" placeholder="Confirm Password">
+            </div>
+          <button class="submit-btn">Submit</button>
+          <h4>Already have an account? <a class="signup-login">Login</a></h4>
+        </div>
+      </form>
+      
+  </div>
+</section>
+  
+
+  <script src="/Artist/artist.js"></script>
 
 </body>
 </html>
