@@ -511,7 +511,7 @@ body{
 
 @media (max-width:450px){
   .login_page{
-    scale: 0.7;
+    scale: 0.8;
   }
   .header{
     display: none;
