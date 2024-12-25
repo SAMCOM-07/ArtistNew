@@ -43,7 +43,13 @@ logClose.onclick = function () {
 }
 
 realLogin.onclick = function () {
-  loginPage.style.display = 'flex';
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'flex';
+    signupBody.style.display = 'none';
+  }
+  elseif(signupBody.style.display = 'flex'); {
+    loginBody.style.display = 'none'
+  }
 }
 
 realSignup.onclick = function () {
@@ -51,10 +57,19 @@ realSignup.onclick = function () {
     loginBody.style.display = 'none';
     signupBody.style.display = 'flex';
   }
+  elseif(signupBody.style.display = 'flex'); {
+    loginBody.style.display = 'none'
+  }
 }
 
 hamLogin.onclick = function () {
-  loginPage.style.display = 'flex';
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'flex';
+    signupBody.style.display = 'none';
+  }
+  elseif(signupBody.style.display = 'flex'); {
+    loginBody.style.display = 'none'
+  }
 }
 
 hamSignup.onclick = function () {
@@ -69,9 +84,6 @@ formSignup.onclick = function () {
     loginBody.style.display = 'none';
     signupBody.style.display = 'flex';
   }
-  else{
-    loginBody.style.display = 'none';
-  }
 }
 
 formLogin.onclick = function () {
@@ -79,8 +91,4 @@ formLogin.onclick = function () {
     loginBody.style.display = 'flex';
     signupBody.style.display = 'none';
   }
-  else{
-    signupBody.style.display = 'none';
-  }
 }
-
