@@ -511,7 +511,7 @@ body{
 
 @media (max-width:450px){
   .login_page{
-    scale: 0.8;
+    scale: 0.7;
   }
   .header{
     display: none;
@@ -566,6 +566,16 @@ body{
   }
 }
 
+@keyframes slide{
+  from{
+    transform: translateY(100%);
+  }
+
+  to{
+    transform: translateY(0);
+  }
+}
+
 .login_page{
   position: absolute;
   background-color: white;
@@ -602,6 +612,7 @@ body{
   margin: 30px;
   padding: 0px 30px;
   text-align: center;
+  animation: slide 1s;
 }
 
 .signup_main{
