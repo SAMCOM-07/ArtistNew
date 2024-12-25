@@ -5,13 +5,19 @@
   font-family: 'poppins';
 }
 
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+a{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
 ul,
 li{
   list-style: none;
-}
-
-a{
-  text-decoration: none;
 }
 
 html{
@@ -397,8 +403,8 @@ body{
   top: 0;
   right: 0;
   background-color: rgba(220, 226, 230, 0.75);
+  box-shadow: -5px 5px 15px -2px rgba(84, 82, 212, 0.726);
   backdrop-filter: blur(5px);
-  box-shadow: -5px 5px 15px -2px rgb(74, 71, 235);
   height: 100%;
   border-radius: 0px 0px 0px 100px;
   text-align: center;
@@ -409,11 +415,10 @@ body{
 
 .close_icon{
   position: absolute;
-  top: 0;
-  margin-top: 20px;
+  top: 20px;
 }
 
-.ham_links{
+.ham_cover{
   font-size: 25px;
 }
 
@@ -458,6 +463,18 @@ body{
     column-gap: 50px;
     justify-content: space-evenly;
   }
+
+  .log-img{
+    display: none;
+  }
+
+  .login_main{
+    padding: 30px;
+  }
+
+  .login_page{
+    margin-top: -700px;
+  }
 }
 
 @media (max-width: 600px){
@@ -493,12 +510,11 @@ body{
 }
 
 @media (max-width:450px){
+  .login_page{
+    scale: 0.7;
+  }
   .header{
     display: none;
-    }
-
-    .ham{
-      display: flex;
     }
 
   .head1{
@@ -510,11 +526,137 @@ body{
     width: 100%;
   }
 
-  .input, .search_btn, .search_icon, .location_icon{
+  .input,
+  .search_btn,
+  .search_icon,
+  .location_icon{
     border-radius: 0px;
   }
 
   .how_head{
     font-size: 24px;
   }
+}
+
+/* login and sign up part */
+.log{
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-size: cover;
+  background-color: #a4a8b67e;
+  top: 0;
+  backdrop-filter: blur(25px);
+  width: 100%;
+  height: 105%;
+  margin: 0px;
+  
+}
+
+@keyframes scale{
+  from{
+    scale: 0.5;
+    opacity: 0.7;
+  }
+
+  to{
+    scale: 1;
+  }
+}
+
+.login_page{
+  position: absolute;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 3px rgb(70, 78, 196);
+  min-width: 300px;
+  animation: scale 0.5s;
+}
+
+#login_head{
+  font-size: 30px;
+  color: blue;
+  text-align: center;
+}
+
+.log-img{
+  width: 350px;
+  height: 500px;
+}
+.log-img img{
+  height: 100%;
+  width: 100%;
+}
+
+.login_main,
+.signup_main{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 30px;
+  padding: 0px 30px;
+  text-align: center;
+}
+
+.signup_main{
+  display: none;
+}
+
+.submit-btn{
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.login_forms{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+}
+
+.login_forms input::placeholder{
+  font-size: 13px;
+  color: rgb(167, 173, 177);
+}
+
+.login_forms input{
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 0px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(51, 51, 228, 0.685);
+}
+
+.remember{
+  font-size: 14px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rem_sign{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_close_icon{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 15px 0px 15px;
 }
