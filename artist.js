@@ -24,3 +24,57 @@ document.addEventListener("click", event => {
     hamMenu.style.display = "none";
   }
 })
+
+
+const logClose = document.querySelector('.login_close_icon');
+const realLogin = document.querySelector('.real-login');
+const realSignup = document.querySelector('.real-signup');
+const hamLogin = document.querySelector('.ham-login');
+const hamSignup = document.querySelector('.ham-signup');
+const formLogin = document.querySelector('.signup-login');
+const formSignup = document.querySelector('.login-signup');
+const loginPage = document.querySelector('.log');
+const loginBody = document.querySelector('.login_main');
+const signupBody = document.querySelector('.signup_main');
+
+
+logClose.onclick = function () {
+  loginPage.style.display = 'none';
+}
+
+realLogin.onclick = function () {
+  loginPage.style.display = 'flex';
+}
+
+realSignup.onclick = function () {
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'none';
+    signupBody.style.display = 'flex';
+  }
+}
+
+hamLogin.onclick = function () {
+  loginPage.style.display = 'flex';
+}
+
+hamSignup.onclick = function () {
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'none';
+    signupBody.style.display = 'flex';
+  }
+}
+
+formSignup.onclick = function () {
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'none';
+    signupBody.style.display = 'flex';
+  }
+}
+
+formLogin.onclick = function () {
+  if(loginPage.style.display = 'flex'){
+    loginBody.style.display = 'flex';
+    signupBody.style.display = 'none';
+  }
+}
+
